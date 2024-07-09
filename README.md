@@ -42,29 +42,6 @@ The script performs the following tasks:
 5. Saves the email metadata (subject, sender, recipients) in a text file.
 6. Saves attachments in both the email's directory and a global `all_attachments` directory.
 
-## Example
-
-Here is an example structure of the output directory:
-
-extracted_emails_and_attachments/
-├── all_attachments/
-│ ├── attachment_1.pdf
-│ ├── attachment_2.jpg
-│ └── ...
-├── Email_Subject_1/
-│ ├── body.txt
-│ ├── metadata.txt
-│ └── attachments/
-│ ├── attachment_1.pdf
-│ └── ...
-├── Email_Subject_2/
-│ ├── body.html
-│ ├── metadata.txt
-│ └── attachments/
-│ ├── attachment_2.jpg
-│ └── ...
-└── ...
-
 ## License
 
 This project is licensed under the MIT License.
