@@ -16,25 +16,9 @@ This script extracts emails and attachments from a PST file. The emails are save
     cd pst-email-attachment-extractor
     ```
 
-2. Create a virtual environment and activate it:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
-
-3. Install the required libraries:
+2. Install the required libraries:
     ```bash
     pip install pypff filetype
-    ```
-
-4. Ensure `libpff` is installed on your system. For macOS, use Homebrew:
-    ```bash
-    brew install libpff
-    ```
-
-    On Ubuntu/Debian:
-    ```bash
-    sudo apt-get install libpff-dev
     ```
 
 ## Usage
@@ -57,3 +41,34 @@ The script performs the following tasks:
 4. Saves the email body in plain text, HTML, or RTF format.
 5. Saves the email metadata (subject, sender, recipients) in a text file.
 6. Saves attachments in both the email's directory and a global `all_attachments` directory.
+
+## Example
+
+Here is an example structure of the output directory:
+
+extracted_emails_and_attachments/
+├── all_attachments/
+│ ├── attachment_1.pdf
+│ ├── attachment_2.jpg
+│ └── ...
+├── Email_Subject_1/
+│ ├── body.txt
+│ ├── metadata.txt
+│ └── attachments/
+│ ├── attachment_1.pdf
+│ └── ...
+├── Email_Subject_2/
+│ ├── body.html
+│ ├── metadata.txt
+│ └── attachments/
+│ ├── attachment_2.jpg
+│ └── ...
+└── ...
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contributing
+
+Contributions are welcome! Please submit a pull request or open an issue to discuss your ideas.
